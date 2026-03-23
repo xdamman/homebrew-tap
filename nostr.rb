@@ -5,20 +5,20 @@
 class Nostr < Formula
   desc "A command-line client for the Nostr protocol"
   homepage "https://github.com/xdamman/nostr-cli"
-  version "1.0.2"
+  version "1.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xdamman/nostr-cli/releases/download/v1.0.2/nostr_darwin_amd64.tar.gz"
-      sha256 "0410519ccf9167295f64def286948365edd3c8b088fbf1dd6fa41c642fd98771"
+      url "https://github.com/xdamman/nostr-cli/releases/download/v1.1.0/nostr_darwin_amd64.tar.gz"
+      sha256 "2b38fe90106d2d03c89cfc63fce50979dca3541f2495efdaab3d01e2ef102488"
 
       define_method(:install) do
         bin.install "nostr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xdamman/nostr-cli/releases/download/v1.0.2/nostr_darwin_arm64.tar.gz"
-      sha256 "f193b715f40f14f661874150d9ff3a2d0d374be55f3c5ac585584cb6d7d4e4bb"
+      url "https://github.com/xdamman/nostr-cli/releases/download/v1.1.0/nostr_darwin_arm64.tar.gz"
+      sha256 "adf64e61457ecd913ef22dc2776b764d4f2448c26a1098c2338b7a751bb64917"
 
       define_method(:install) do
         bin.install "nostr"
@@ -28,15 +28,15 @@ class Nostr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xdamman/nostr-cli/releases/download/v1.0.2/nostr_linux_amd64.tar.gz"
-      sha256 "9b24f62a253ca998a0ac787e1104cf967f768d5910b440f0b1c6b8a953c0acc2"
+      url "https://github.com/xdamman/nostr-cli/releases/download/v1.1.0/nostr_linux_amd64.tar.gz"
+      sha256 "c609a5f0a5bc912459479d4325b6a4617188efc7e654b8cc32420a4bf50e37d4"
       define_method(:install) do
         bin.install "nostr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xdamman/nostr-cli/releases/download/v1.0.2/nostr_linux_arm64.tar.gz"
-      sha256 "f3e8c7dc1ea59806004fa923b5ac5703c117a9f7680a4e96f1ceda0736dd4b3c"
+      url "https://github.com/xdamman/nostr-cli/releases/download/v1.1.0/nostr_linux_arm64.tar.gz"
+      sha256 "930c8e00902a49782666330c18e9619983990b9c5d7d4daae506b2feaf9b680d"
       define_method(:install) do
         bin.install "nostr"
       end
