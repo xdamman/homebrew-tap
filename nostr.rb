@@ -10,7 +10,7 @@ class Nostr < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/xdamman/nostr-cli/releases/download/v1.4.1/nostr_darwin_amd64.tar.gz"
-      sha256 "179c4aa862a9f6d9b2bc589cc7168a2e8bbfa841e873bb11b67588b6346d0695"
+      sha256 "fe6fc4cc2e1f8b95db6e9d76f8d6f500beeb0dca29e73469e26792b58515d0b6"
 
       define_method(:install) do
         bin.install "nostr"
@@ -18,7 +18,7 @@ class Nostr < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/xdamman/nostr-cli/releases/download/v1.4.1/nostr_darwin_arm64.tar.gz"
-      sha256 "f02652f024601d7906c210ec83f2da80c61db2d5b5b8096d6f59622ac32716ae"
+      sha256 "cc0e1073fe481483f6852fd6161a8fa03d02cb4a54d4b3e5ce630e6a79844738"
 
       define_method(:install) do
         bin.install "nostr"
@@ -29,14 +29,14 @@ class Nostr < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/xdamman/nostr-cli/releases/download/v1.4.1/nostr_linux_amd64.tar.gz"
-      sha256 "4b023799b151731815405199a8586602b812be2badc9eff6981631dd2f80af2f"
+      sha256 "ceb2e718f16223854d6d184ca174ef0f222a343c6dc6722b28e618d3aa851985"
       define_method(:install) do
         bin.install "nostr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/xdamman/nostr-cli/releases/download/v1.4.1/nostr_linux_arm64.tar.gz"
-      sha256 "69eae962351d5104119bdb13251bfcc92c12ce7e3d97f95b0e98a3a202533031"
+      sha256 "7429a2ba2b2876839732ac83718a050654c39e992931abbec22f202580e5a462"
       define_method(:install) do
         bin.install "nostr"
       end
